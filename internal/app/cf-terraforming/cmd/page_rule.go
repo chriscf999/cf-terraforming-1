@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const pageRuleTemplate = `1
+const pageRuleTemplate = `
 resource "cloudflare_page_rule" "page_rule_{{.Rule.ID}}" {
     zone_id = "{{.Zone.ID}}"
 {{ range .Rule.Targets}}
